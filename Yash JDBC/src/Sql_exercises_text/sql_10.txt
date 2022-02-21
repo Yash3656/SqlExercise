@@ -1,0 +1,6 @@
+/*Write a query to find the 4th minimum salary in the employees table*/
+SELECT DISTINCT SALARY
+FROM EMPLOYEES A 
+WHERE 4=(SELECT COUNT(DISTINCT SALARY)
+FROM EMPLOYEES b
+WHERE B.SALARY<=A.SALARY);

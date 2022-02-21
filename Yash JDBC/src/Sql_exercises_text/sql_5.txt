@@ -1,0 +1,6 @@
+/*Write a query that produces all customers with their name, city, salesman and commission,
+ who served by a salesman and the salesman works at a rate of the commission within 12% to 14%*/
+ select customer.cust_name,customer.city,salesman.connection,salesman.name
+ from salesman,customer
+ where customer.salesman_id=salesman.salesman_id
+ AND salesman.connection BETWEEN .12 AND .14;

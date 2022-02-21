@@ -1,0 +1,4 @@
+/* Write a SQL statement that finds out each order number followed by the name of the customers who made the order.*/
+select customer.cust_name,orders.ord_no
+from customer,orders
+where orders.customer_id=customer.customer_id;

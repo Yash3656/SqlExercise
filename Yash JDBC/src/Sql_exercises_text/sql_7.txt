@@ -1,0 +1,4 @@
+/*Write a query to list the department ID and name of all the departments where no employee is working.*/
+SELECT * FROM DEPARTMENTS
+WHERE DEPARTMENT_ID 
+NOT IN(SELECT DEPARTMENT_ID FROM EMPLOYEES);

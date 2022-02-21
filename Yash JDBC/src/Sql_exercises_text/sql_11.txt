@@ -1,0 +1,6 @@
+/*Write a query to display the employee ID, first name, last name, salary of all employees whose salary is 
+above average for their departments.*/
+SELECT EMPLOYEES.EMPLOYEE_ID,EMPLOYEES.FIRST_NAME,
+EMPLOYEES.LAST_NAME,EMPLOYEES.SALARY
+FROM EMPLOYEES
+WHERE SALARY > (SELECT AVG(SALARY) FROM EMPLOYEES WHERE DEPARTMENT_ID=EMPLOYEES.DEPARTMENT_ID);
